@@ -9,10 +9,10 @@
 <body>
     <header class="navbar">
         <div class="nav-container">
-            <div class="logo"><a href="frede networks.html">Frede Networks</a></div>
+            <div class="logo"><a href="index.html">Frede Networks</a></div>
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="frede networks.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="bio.html">Academic Work</a></li>
                     <li><a href="projects.html">Projects</a></li>
@@ -33,20 +33,63 @@
                 <article class="document-card">
                     <h3>CV</h3>
                     <p>Download my curriculum vitae with details about my skills, education, and experience.</p>
-                    <a class="btn" href="documents/CV.pdf" download>Download CV</a>
+                    <a class="btn" href="documents/Fredrick_Kiroyian_CV.pdf" download="CV.pdf">Download CV</a>
                 </article>
                 <article class="document-card">
                     <h3>Academic Transcripts</h3>
-                    <p>View and download official transcripts from my academic studies.</p>
-                    <a class="btn" href="documents/transcripts.pdf" download>Download Transcripts</a>
+                    <p>Download the individual official transcripts from my academic studies.</p>
+                    <button class="btn" id="open-transcript-modal" type="button">Download Transcripts</button>
                 </article>
                 <article class="document-card">
                     <h3>Supportive Documents</h3>
                     <p>Access additional supporting documents for certificates and project verifications.</p>
-                    <a class="btn" href="documents/supporting-documents.pdf" download>Download Documents</a>
+                    <button class="btn" id="open-support-modal" type="button">Download Documents</button>
                 </article>
             </div>
         </section>
+        <div class="modal" id="transcript-modal" aria-hidden="true">
+            <div class="modal-backdrop" id="modal-backdrop"></div>
+            <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                <button class="modal-close" id="modal-close" type="button" aria-label="Close">×</button>
+                <h3 id="modal-title">Select transcripts to download</h3>
+                <p>Click a file's Download button to open or save it.</p>
+                <ul class="download-list">
+                    <li>
+                        Transcript Year 4
+                        <a class="btn" href="documents/year%204.pdf" download="Transcript-Year-4.pdf">Download</a>
+                    </li>
+                </ul>
+                <div class="modal-actions">
+                    <button class="btn btn-secondary" id="transcript-cancel" type="button">Close</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="support-modal" aria-hidden="true">
+            <div class="modal-backdrop" id="support-modal-backdrop"></div>
+            <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="support-modal-title">
+                <button class="modal-close" id="support-modal-close" type="button" aria-label="Close">×</button>
+                <h3 id="support-modal-title">Select supporting documents to download</h3>
+                <p>Click a file's Download button to open or save it.</p>
+                <ul class="download-list">
+                    <li>
+                        KIROYAN OLTIMBILI — CV
+                        <a class="btn" href="supporting/KIROYAN%20OLTIMBILI%20%20CURRICULUM%20VITAE.pdf" download="KIROYAN-CV.pdf">Download</a>
+                    </li>
+                    <li>
+                        CERT COMPLETED
+                        <a class="btn" href="supporting/CERT%20COMPLETED.png" download="CERT-COMPLETED.png">Download</a>
+                    </li>
+                    <li>
+                        Itel City100 (text)
+                        <a class="btn" href="supporting/Itel%20City100.txt" download="Itel-City100.txt">Download</a>
+                    </li>
+                </ul>
+                <div class="modal-actions">
+                    <button class="btn btn-secondary" id="support-cancel" type="button">Close</button>
+                </div>
+            </div>
+        </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
